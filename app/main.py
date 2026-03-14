@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import chatbot_integration
 from app.database import connect_to_mongo, close_mongo_connection
 from routes import (
     dashboard_routes,
@@ -11,7 +10,6 @@ from routes import (
     pii_routes,
     chatbot_routes,
 )
-app.include_router(chatbot_integration.router)
 app = FastAPI(title="PrivacyGuardian API", version="1.0.0")
 
 # CORS for Next.js frontend
