@@ -16,7 +16,7 @@ app = FastAPI(title="PrivacyGuardian API", version="1.0.0")
 # CORS for Next.js frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Update with frontend URL
+    allow_origins=["*"],  # Update with frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
